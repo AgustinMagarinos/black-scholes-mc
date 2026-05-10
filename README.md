@@ -33,7 +33,7 @@ quantitative finance.
 
 ### Black-Scholes Formula
 
-The Black-Scholes model prices a European call option under the assumption that 
+The Black-Scholes model prices a call option under the assumption that 
 stock prices follow Geometric Brownian Motion:
 
 $$S_T = S_0 \cdot \exp\left(\left(r - \frac{\sigma^2}{2}\right)T + \sigma\sqrt{T} \cdot Z\right)$$
@@ -50,8 +50,8 @@ The formula has a clean interpretation: it is the expected stock contribution to
 the payoff minus the discounted expected cost of exercising, each weighted by 
 their relevant probability.
 
-- $N(d_2)$ — risk-neutral probability the option expires in the money
-- $N(d_1)$ — probability weighted by the size of the stock's contribution to the payoff
+- $N(d_2)$ - risk-neutral probability the option expires in the money
+- $N(d_1)$ - probability weighted by the size of the stock's contribution to the payoff
 
 Put prices follow from put-call parity, which holds exactly by no-arbitrage:
 
@@ -79,15 +79,17 @@ Sensitivities of the option price to each input:
 | Theta | Time decay per day | See src/greeks.py |
 | Rho | Sensitivity to interest rates | $K T e^{-rT} N(d_2)$ |
 
+where $N(\cdot)$ denotes the standard normal CDF and $N'(\cdot)$ its derivative, the PDF.
+
 Delta follows an S-curve from 0 to 1 as the stock price rises through the strike. 
-Gamma and Vega both peak at the money — where the option is most sensitive to 
+Gamma and Vega both peak at the money, where the option is most sensitive to 
 changes in the underlying.
 
 ### Implied Volatility
 
 Volatility is the only unobservable input to Black-Scholes. Given a market price, 
 we invert the formula numerically using Brent's method to extract the implied 
-volatility — the market's collective estimate of future uncertainty.
+volatility, the market's collective estimate of future uncertainty.
 
 Plotting implied vol across strikes reveals the volatility skew: out of the money 
 options trade at higher implied vol than at the money options, reflecting the 
@@ -100,7 +102,7 @@ with Delta 0.50, you buy 0.50 shares per option sold. As the stock moves, Delta
 changes (Gamma), so the hedge must be rebalanced periodically.
 
 With weekly rebalancing (52 steps) over 200 simulated paths, the mean hedging 
-PnL is approximately $0.01 with a standard deviation of ~$1.10 — demonstrating 
+PnL is approximately $0.01 with a standard deviation of ~$1.10, demonstrating 
 that discrete delta hedging closely replicates the theoretical zero-cost continuous 
 hedge of Black-Scholes.
 
