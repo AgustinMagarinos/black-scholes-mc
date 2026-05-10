@@ -127,7 +127,7 @@ hedge of Black-Scholes.
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/black-scholes-mc.git
+git clone https://github.com/AgustinMagarinos/black-scholes-mc.git
 cd black-scholes-mc
 pip install -r requirements.txt
 ```
