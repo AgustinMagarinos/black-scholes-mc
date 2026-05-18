@@ -112,7 +112,6 @@ hedge of Black-Scholes.
 ### Option Greeks vs Stock Price
 ![Greeks](plots/greeks.png)
 
-
 ### Delta Hedging PnL Distribution
 ![Delta Hedge](plots/delta_hedge.png)
 
