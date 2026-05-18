@@ -8,17 +8,17 @@ def simulate_paths(S, T, r, sigma, n_paths=200, n_steps=252):
 
     Parameters
     ----------
-    S       : float : current stock price
-    T       : float : time to expiration in years
-    r       : float : risk-free interest rate
-    sigma   : float : volatility
+    S : float : current stock price
+    T : float : time to expiration in years
+    r : float : risk-free interest rate
+    sigma : float : volatility
     n_paths : int   : number of paths to simulate
     n_steps : int   : number of time steps (252 = trading days in a year)
 
     Returns
     -------
     paths : np.ndarray of shape (n_steps + 1, n_paths)
-    time  : np.ndarray of time points
+    time : np.ndarray of time points
     """
     dt = T / n_steps
     time = np.linspace(0, T, n_steps + 1)

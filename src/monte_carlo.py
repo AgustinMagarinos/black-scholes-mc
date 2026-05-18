@@ -9,12 +9,12 @@ def monte_carlo_call(S, K, T, r, sigma, n=100000):
 
     Parameters
     ----------
-    S             : float : current stock price
-    K             : float : strike price
-    T             : float : time to expiration in years
-    r             : float : risk-free interest rate (annualized)
-    sigma         : float : volatility (annualized)
-    n             : int : number of simulated price paths
+    S : float : current stock price
+    K : float : strike price
+    T : float : time to expiration in years
+    r : float : risk-free interest rate (annualized)
+    sigma : float : volatility (annualized)
+    n : int : number of simulated price paths
 
     Returns
     -------

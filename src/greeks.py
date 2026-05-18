@@ -7,10 +7,10 @@ def greeks(S, K, T, r, sigma):
 
     Parameters
     ----------
-    S     : float : current stock price
-    K     : float : strike price
-    T     : float : time to expiration in years
-    r     : float : risk-free interest rate
+    S : float : current stock price
+    K : float : strike price
+    T : float : time to expiration in years
+    r : float : risk-free interest rate
     sigma : float : volatility
 
     Returns
@@ -44,13 +44,13 @@ def greeks(S, K, T, r, sigma):
 
     return {
         "delta_call": delta_call,
-        "delta_put":  delta_put,
-        "gamma":      gamma,
-        "vega":       vega,
+        "delta_put": delta_put,
+        "gamma": gamma,
+        "vega": vega,
         "theta_call": theta_call,
-        "theta_put":  theta_put,
-        "rho_call":   rho_call,
-        "rho_put":    rho_put,
+        "theta_put": theta_put,
+        "rho_call": rho_call,
+        "rho_put": rho_put,
     }
 
 if __name__ == "__main__":
@@ -58,11 +58,11 @@ if __name__ == "__main__":
 
     g = greeks(S, K, T, r, sigma)
 
-    print(f"Delta  (call): {g['delta_call']:.4f}")
-    print(f"Delta  (put):  {g['delta_put']:.4f}")
-    print(f"Gamma:         {g['gamma']:.4f}")
-    print(f"Vega:          {g['vega']:.4f}")
-    print(f"Theta  (call): {g['theta_call']:.4f}")
-    print(f"Theta  (put):  {g['theta_put']:.4f}")
-    print(f"Rho    (call): {g['rho_call']:.4f}")
-    print(f"Rho    (put):  {g['rho_put']:.4f}")
+    print(f"Delta (call): {g['delta_call']:.4f}")
+    print(f"Delta (put): {g['delta_put']:.4f}")
+    print(f"Gamma: {g['gamma']:.4f}")
+    print(f"Vega: {g['vega']:.4f}")
+    print(f"Theta (call): {g['theta_call']:.4f}")
+    print(f"Theta (put): {g['theta_put']:.4f}")
+    print(f"Rho (call): {g['rho_call']:.4f}")
+    print(f"Rho (put): {g['rho_put']:.4f}")

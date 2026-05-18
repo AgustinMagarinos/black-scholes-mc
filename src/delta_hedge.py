@@ -13,13 +13,13 @@ def delta_hedge_simulation(S0, K, T, r, sigma, n_steps=52, n_sims=5):
 
         Parameters
         ----------
-        S0     : float : initial stock price
-        K      : float : strike price
-        T      : float : time to expiration in years
-        r      : float : risk-free rate
-        sigma  : float : volatility
-        n_steps: int   : number of rebalancing steps (52 = weekly)
-        n_sims : int   : number of paths to simulate
+        S0 : float : initial stock price
+        K : float : strike price
+        T : float : time to expiration in years
+        r : float : risk-free rate
+        sigma : float : volatility
+        n_steps: int : number of rebalancing steps (52 = weekly)
+        n_sims : int : number of paths to simulate
 
         Returns
         -------
@@ -114,10 +114,10 @@ def plot_delta_hedge(S0, K, T, r, sigma, n_steps=52, n_sims=200):
     plt.savefig("plots/delta_hedge.png", dpi=150, bbox_inches="tight")
     plt.show()
     print(f"\nPnL summary across {n_sims} simulations:")
-    print(f"  Mean PnL:   ${np.mean(results['pnls']):.4f}")
-    print(f"  Std PnL:    ${np.std(results['pnls']):.4f}")
-    print(f"  Min PnL:    ${np.min(results['pnls']):.4f}")
-    print(f"  Max PnL:    ${np.max(results['pnls']):.4f}")
+    print(f"Mean PnL: ${np.mean(results['pnls']):.4f}")
+    print(f"Std PnL: ${np.std(results['pnls']):.4f}")
+    print(f"Min PnL: ${np.min(results['pnls']):.4f}")
+    print(f"Max PnL: ${np.max(results['pnls']):.4f}")
 
 
 if __name__ == "__main__":

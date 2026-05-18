@@ -1,6 +1,6 @@
 # Black-Scholes Options Pricer & Monte Carlo Simulator
 
-A Python implementation of the Black-Scholes options pricing model, Monte Carlo 
+A Python implementation of the Black-Scholes European options pricing model, Monte Carlo 
 simulation, Greeks calculation, implied volatility extraction, and delta hedging 
 simulation.
 
@@ -91,10 +91,6 @@ Volatility is the only unobservable input to Black-Scholes. Given a market price
 we invert the formula numerically using Brent's method to extract the implied 
 volatility, the market's collective estimate of future uncertainty.
 
-Plotting implied vol across strikes reveals the volatility skew: out of the money 
-options trade at higher implied vol than at the money options, reflecting the 
-market's fear of tail risk not captured by the normal distribution assumption.
-
 ### Delta Hedging
 
 A delta hedge eliminates directional exposure to the stock. If you sell a call 
@@ -116,8 +112,6 @@ hedge of Black-Scholes.
 ### Option Greeks vs Stock Price
 ![Greeks](plots/greeks.png)
 
-### Implied Volatility Smile
-![Vol Smile](plots/vol_smile.png)
 
 ### Delta Hedging PnL Distribution
 ![Delta Hedge](plots/delta_hedge.png)
