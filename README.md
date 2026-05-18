@@ -12,6 +12,11 @@ quantitative finance.
 ## Project Structure
 
     black-scholes-mc/
+      notebooks/
+        01_black_scholes.ipynb              # BS theory, implementation, sensitivity analysis
+        02_monte_carlo.ipynb                # GBM simulation, convergence analysis, path visualization
+        03_greeks_and_implied_vol.ipynb     # Greeks curves, implied vol extraction
+        04_delta_hedging.ipynb              # Hedging simulation, PnL distribution, frequency analysis
       src/
         black_scholes.py     # Closed-form BS pricer for calls and puts
         monte_carlo.py       # Monte Carlo simulation using GBM
