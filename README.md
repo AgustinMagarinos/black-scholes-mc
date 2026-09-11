@@ -51,9 +51,7 @@ $$C = S_0 \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)$$
 
 $$d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + \left(r + \frac{\sigma^2}{2}\right)T}{\sigma\sqrt{T}}, \quad d_2 = d_1 - \sigma\sqrt{T}$$
 
-The formula has a clean interpretation: it is the expected stock contribution to 
-the payoff minus the discounted expected cost of exercising, each weighted by 
-their relevant probability.
+The formula has a simple interpretation: present value of the stock you effectively receive when the call is exercised, accounting for the states in which exercise occurs (that is S_0 \cdot N(d_1)) minus the discounted expected cost of exercising (K \cdot e^{-rT} \cdot N(d_2)$$).
 
 - $N(d_2)$ - risk-neutral probability the option expires in the money
 - $N(d_1)$ - probability weighted by the size of the stock's contribution to the payoff
